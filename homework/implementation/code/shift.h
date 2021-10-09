@@ -12,7 +12,6 @@ using namespace std;
 
 // шифрование сдвигом
 struct shift {
-    int n;
     char message[MAX_MESSAGE];
 };
 

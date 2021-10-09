@@ -13,7 +13,6 @@ using namespace std;
 
 // шифрование символа в символ
 struct nums {
-    unordered_map<char, int>* table;
     char message[MAX_MESSAGE];
 };
 
