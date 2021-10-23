@@ -6,34 +6,35 @@
 #include "rnd.h"
 #include "constants.h"
 
+Symbol::~Symbol() = default;
 //------------------------------------------------------------------------------
 // Ввод параметров
-void In(symbol &p, std::ifstream &ifst) {
-    ifst >> p.message;
+void Symbol::In(std::ifstream *ifst) {
+    *ifst >> message;
 }
 
 // Случайный ввод параметров
-void InRnd(symbol &f) {
+void Symbol::InRnd() {
     for (size_t i = 0; i < MAX_MESSAGE; ++i) {
-        f.message[i] = char('a' + Random());
+        message[i] = char('a' + Random());
     }
 }
 
 //------------------------------------------------------------------------------
 // Вывод параметров
-void Out(symbol &f, std::ofstream &ofst) {
-    ofst << "It is symbol cipher: message = "
-         << f.message << "\n"
-         << "Div result: " << Div(f) << "\n";
+void Symbol::Out(std::ofstream *ofst) {
+    *ofst << "It is symbol cipher: message = "
+         << message << "\n"
+         << "Div result: " << Div() << "\n";
 }
 
 //------------------------------------------------------------------------------
 // Частное от незашифрованного сообщения.
-double Div(symbol &f) {
+double Symbol::Div() {
     double sum = 0;
     double counter = 0;
     for (int i = 0; i < MAX_MESSAGE; i++) {
-        sum += f.message[i];
+        sum += message[i];
         ++counter;
     }
     return sum / counter;

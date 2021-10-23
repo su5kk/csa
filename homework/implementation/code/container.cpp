@@ -3,68 +3,71 @@
 //------------------------------------------------------------------------------
 
 #include "container.h"
+#include "fstream"
+using namespace std;
 
-//------------------------------------------------------------------------------
-// Инициализация контейнера
-void Init(container &c) {
-    c.len = 0;
+// Конструктор контейнера
+Container::Container(): len(0), cont() {}
+
+// Деструктор контейнера
+Container::~Container() {
+    Clear();
 }
 
-//------------------------------------------------------------------------------
 // Очистка контейнера от элементов (освобождение памяти)
-void Clear(container &c) {
-    for(int i = 0; i < c.len; i++) {
-        delete c.cont[i];
+void Container::Clear() {
+    for(int i = 0; i < len; i++) {
+        delete cont[i];
     }
-    c.len = 0;
+    len = 0;
 }
 
 //------------------------------------------------------------------------------
 // Ввод содержимого контейнера из указанного потока
-void In(container &c, ifstream &ifst) {
-    while(!ifst.eof()) {
-        if((c.cont[c.len] = In(ifst)) != 0) {
-            c.len++;
+void Container::In(ifstream *ifst) {
+    while(!ifst->eof()) {
+        if((cont[len] = Text::StaticIn(ifst)) != nullptr) {
+            len++;
         }
     }
 }
 
 //------------------------------------------------------------------------------
 // Случайный ввод содержимого контейнера
-void InRnd(container &c, int size) {
-    while (c.len < size) {
-        if ((c.cont[c.len] = InRnd()) != nullptr) {
-            c.len++;
+void Container::InRnd(int size) {
+    while(len < size) {
+        if((cont[len] = Text::StaticInRnd()) != nullptr) {
+            len++;
         }
     }
 }
 
 //------------------------------------------------------------------------------
 // Вывод содержимого контейнера в указанный поток
-void Out(container &c, ofstream &ofst) {
-    ofst << "Container contains " << c.len << " elements." << endl;
-    for(int i = 0; i < c.len; i++) {
-        ofst << i << ": ";
-        Out(*(c.cont[i]), ofst);
+void Container::Out(ofstream *ofst) {
+    *ofst << "Container contains " << len << " elements.\n";
+    for(int i = 0; i < len; i++) {
+        *ofst << i << ": ";
+        cont[i]->Out(ofst);
     }
 }
 
 //------------------------------------------------------------------------------
 // Сортировка контейнера методом Шэлла методом Шэлла
-void Sort(container &c) {
-    int n = c.len;
-    text *temp;
+void Container::Sort() {
+    int n = len;
+    Text *temp;
     for (int gap = n/2; gap > 0; gap /= 2)
     {
         for (int i = gap; i < n; i += 1)
         {
-            temp = c.cont[i];
+            temp = cont[i];
  
             int j;           
-            for (j = i; j >= gap && Div(*c.cont[j - gap]) > Div(*temp); j -= gap) {
-                c.cont[j] = c.cont[j - gap];
+            for (j = i; j >= gap && cont[j - gap]->Div() > temp->Div(); j -= gap) {
+                cont[j] = cont[j - gap];
             }
-            c.cont[j] = temp;
+            cont[j] = temp;
         }
     }
 }

@@ -4,82 +4,50 @@
 
 #include "text.h"
 #include "string.h"
+#include "symbol.h"
+#include "nums.h"
+#include "shift.h"
+#include "reader.h"
 #include <iostream>
+
+using std::string;
 
 //------------------------------------------------------------------------------
 // Ввод параметров обобщенного текста из файла.
-text* In(std::ifstream &ifst) {
-    text* txt;
-    char type[MAX_NAME];
-    ifst >> type;
+Text* Text::StaticIn(ifstream *ifst) {
+    Text* txt;
+    char type[6];
+    *ifst >> type;
     if (!strcmp(type, "nums")) {
-        txt = new text;
-        txt->k = text::NUMS;
-        In(txt->num, ifst);
+        txt = new Nums;
     } else if (!strcmp(type, "symbol")) {
-        txt = new text;
-        txt->k = text::SYMBOL;
-        In(txt->sym, ifst);
+        txt = new Symbol;
     } else if (!strcmp(type, "shift")) {
-        txt = new text;
-        txt->k = text::SHIFT;
-        In(txt->s, ifst);
+        txt = new Shift;
     } else {
         std::cout << "ERROR: wrong cipher type" << type;
         exit(1);
     }
+    txt->In(ifst);
     return txt;
 }
 
-// Случайный ввод
-text *InRnd() {
-    text *txt;
-    auto type = rand() % 3;
-    if (type == 0) {
-        txt = new text;
-        txt->k = text::NUMS;
-        InRnd(txt->num);
-    } else if (type == 2) {
-        txt = new text;
-        txt->k = text::SYMBOL;
-        InRnd(txt->sym);
-    } else {
-        txt = new text;
-        txt->k = text::SHIFT;
-        InRnd(txt->s);
-    }
-    return txt;
-}
-
-//------------------------------------------------------------------------------
-// Вывод параметров
-void Out(text &txt, std::ofstream &ofst) {
-    switch (txt.k) {
-        case text::NUMS:
-            Out(txt.num, ofst);
+Text *Text::StaticInRnd() {
+    int k = 1 + (rand() % 3);
+    Text* sp = nullptr;
+    switch(k) {
+        case 1:
+            sp = new Symbol;
             break;
-        case text::SYMBOL:
-            Out(txt.sym, ofst);
+        case 2:
+            sp = new Nums;
             break;
-        case text::SHIFT:
-            Out(txt.s, ofst);
+        case 3:
+            sp = new Shift;
             break;
         default:
-            ofst << "Incorrect text type!\n";
+            return nullptr;
     }
-}
-
-//------------------------------------------------------------------------------
-// Частное от сообщения.
-double Div(text &txt) {
-    switch (txt.k) {
-        case text::NUMS:
-            return Div(txt.num);
-        case text::SYMBOL:
-            return Div(txt.sym);
-        case text::SHIFT:
-            return Div(txt.s);
-        default:
-            return 0;
-    }
+    sp->InRnd();
+    return sp;
 }

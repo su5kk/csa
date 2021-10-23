@@ -5,34 +5,35 @@
 #include "nums.h"
 #include "rnd.h"
 
+Nums::~Nums() = default;
 //------------------------------------------------------------------------------
 // Ввод параметров
-void In(nums &p, std::ifstream &ifst) {
-    ifst >> p.message;
+void Nums::In(std::ifstream *ifst) {
+    *ifst >> message;
 }
 
 // Случайный ввод параметров
-void InRnd(nums &f) {
+void Nums::InRnd() {
     for (size_t i = 0; i < MAX_MESSAGE; ++i) {
-        f.message[i] = char('a' + Random());
+        message[i] = char('a' + Random());
     }
 }
 
 //------------------------------------------------------------------------------
 // Вывод параметров
-void Out(nums &f, std::ofstream &ofst) {
-    ofst << "It is nums cipher: message = "
-         << f.message << "\n"
-         << "Div result: " << Div(f) << "\n";
+void Nums::Out(std::ofstream *ofst) {
+    *ofst << "It is Nums cipher: message = "
+         << message << "\n"
+         << "Div result: " << Div() << "\n";
 }
 
 //------------------------------------------------------------------------------
 // Частное от незашифрованного сообщения.
-double Div(nums &f) {
+double Nums::Div() {
     double sum = 0;
     double counter = 0;
     for (int i = 0; i < MAX_MESSAGE; i++) {
-        sum += f.message[i];
+        sum += message[i];
         ++counter;
     }
     return sum / counter;

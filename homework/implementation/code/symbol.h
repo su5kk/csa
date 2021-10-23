@@ -6,25 +6,18 @@
 //------------------------------------------------------------------------------
 
 #include <fstream>
-#include <unordered_map>
-#include "rnd.h"
 #include "constants.h"
+#include "text.h"
 using namespace std;
-// шифрование символа в символ
-struct symbol {
+
+class Symbol: public Text {
+private:
     char message[MAX_MESSAGE];
+public:
+    ~Symbol();
+    virtual void In(ifstream *ifst);
+    virtual void InRnd();
+    virtual void Out(ofstream *ofst);
+    virtual double Div();
 };
-
-// Ввод параметров
-void In(symbol &r, ifstream &ifst);
-
-// Случайный ввод параметров
-void InRnd(symbol &f);
-
-// Вывод параметров
-void Out(symbol &r, ofstream &ofst);
-
-// Вычисление
-double Div(symbol &r);
-
 #endif //__symbol__

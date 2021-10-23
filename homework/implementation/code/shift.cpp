@@ -5,34 +5,35 @@
 #include "shift.h"
 #include "rnd.h"
 
+Shift::~Shift() = default;
 //------------------------------------------------------------------------------
 // Ввод параметров
-void In(shift &p, std::ifstream &ifst) {
-    ifst >> p.message;
+void Shift::In(std::ifstream *ifst) {
+    *ifst >> message;
 }
 
 // Случайный ввод параметров
-void InRnd(shift &f) {
+void Shift::InRnd() {
     for (size_t i = 0; i < MAX_MESSAGE; ++i) {
-        f.message[i] = char('a' + Random());
+        message[i] = char('a' + Random());
     }
 }
 
 //------------------------------------------------------------------------------
 // Вывод параметров
-void Out(shift &f, std::ofstream &ofst) {
-    ofst << "It is shift cipher: message = "
-         << f.message << "\n"
-         << "Div result: " << Div(f) << "\n";
+void Shift::Out(std::ofstream *ofst) {
+    *ofst << "It is Shift cipher: message = "
+         << message << "\n"
+         << "Div result: " << Div() << "\n";
 }
 
 //------------------------------------------------------------------------------
 // Частное от незашифрованного сообщения.
-double Div(shift &f) {
+double Shift::Div() {
     double sum = 0;
     double counter = 0;
     for (int i = 0; i < MAX_MESSAGE; i++) {
-        sum += f.message[i];
+        sum += message[i];
         ++counter;
     }
     return sum / counter;

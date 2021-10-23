@@ -8,23 +8,17 @@
 #include <fstream>
 #include "rnd.h"
 #include "constants.h"
+#include "text.h"
 using namespace std;
 
-// шифрование сдвигом
-struct shift {
+class Shift: public Text {
+private:
     char message[MAX_MESSAGE];
+public:
+    ~Shift();
+    virtual void In(ifstream *ifst);
+    virtual void InRnd();
+    virtual void Out(ofstream *ofst);
+    virtual double Div();
 };
-
-// Ввод параметров
-void In(shift &r, ifstream &ifst);
-
-// Случайный ввод параметров
-void InRnd(shift &f);
-
-// Вывод параметров
-void Out(shift &r, ofstream &ofst);
-
-// Вычисление
-double Div(shift &r);
-
 #endif //__shift__

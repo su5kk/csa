@@ -1,31 +1,21 @@
 #ifndef __nums__
 #define __nums__
 
-//------------------------------------------------------------------------------
-// nums.h - содержит описание шифрования символ в символ  и его интерфейса
-//------------------------------------------------------------------------------
-
 #include <fstream>
 #include <unordered_map>
 #include "rnd.h"
 #include "constants.h"
+#include "text.h"
 using namespace std;
 
-// шифрование символа в символ
-struct nums {
+class Nums: public Text {
+private:
     char message[MAX_MESSAGE];
+public:
+    ~Nums();
+    virtual void In(ifstream *ifst);
+    virtual void InRnd();
+    virtual void Out(ofstream *ofst);
+    virtual double Div();
 };
-
-// Ввод параметров
-void In(nums &r, ifstream &ifst);
-
-// Случайный ввод параметров
-void InRnd(nums &f);
-
-// Вывод параметров
-void Out(nums &r, ofstream &ofst);
-
-// Вычисление
-double Div(nums &r);
-
 #endif //__nums__
