@@ -1,6 +1,6 @@
 # Репозиторий с ДЗ по курсу АВС
 
-## HW 1
+## HW 2 (OOP)
 Variant number = 191
 Number of task = 9
 Number of function = 14
