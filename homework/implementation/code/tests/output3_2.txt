@@ -1,0 +1,42 @@
+Sorted container:
+Container contains 40 elements.
+0: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+1: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+2: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+3: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+4: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+5: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+6: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+7: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+8: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+9: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+10: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+11: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+12: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+13: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+14: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+15: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+16: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+17: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+18: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+19: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+20: It is nums cipher: message = 22469496283032369789, Div = 53.100
+21: It is nums cipher: message = 22469496283032369789, Div = 53.100
+22: It is nums cipher: message = 22469496283032369789, Div = 53.100
+23: It is nums cipher: message = 22469496283032369789, Div = 53.100
+24: It is nums cipher: message = 11839599170430180289, Div = 52.400
+25: It is nums cipher: message = 11839599170430180289, Div = 52.400
+26: It is nums cipher: message = 11839599170430180289, Div = 52.400
+27: It is nums cipher: message = 11839599170430180289, Div = 52.400
+28: It is nums cipher: message = 92461062083782064386, Div = 52.250
+29: It is nums cipher: message = 92461062083782064386, Div = 52.250
+30: It is nums cipher: message = 92461062083782064386, Div = 52.250
+31: It is nums cipher: message = 92461062083782064386, Div = 52.250
+32: It is nums cipher: message = 99242260282392671415, Div = 52.200
+33: It is nums cipher: message = 99242260282392671415, Div = 52.200
+34: It is nums cipher: message = 99242260282392671415, Div = 52.200
+35: It is nums cipher: message = 99242260282392671415, Div = 52.200
+36: It is nums cipher: message = 01863802888614706410, Div = 52.050
+37: It is nums cipher: message = 01863802888614706410, Div = 52.050
+38: It is nums cipher: message = 01863802888614706410, Div = 52.050
+39: It is nums cipher: message = 01863802888614706410, Div = 52.050

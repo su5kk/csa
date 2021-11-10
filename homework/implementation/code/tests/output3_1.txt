@@ -1,0 +1,42 @@
+Filled container:
+Container contains 40 elements.
+0: It is nums cipher: message = 99242260282392671415, Div = 52.200
+1: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+2: It is nums cipher: message = 22469496283032369789, Div = 53.100
+3: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+4: It is nums cipher: message = 01863802888614706410, Div = 52.050
+5: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+6: It is nums cipher: message = 92461062083782064386, Div = 52.250
+7: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+8: It is nums cipher: message = 11839599170430180289, Div = 52.400
+9: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+10: It is nums cipher: message = 99242260282392671415, Div = 52.200
+11: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+12: It is nums cipher: message = 22469496283032369789, Div = 53.100
+13: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+14: It is nums cipher: message = 01863802888614706410, Div = 52.050
+15: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+16: It is nums cipher: message = 92461062083782064386, Div = 52.250
+17: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+18: It is nums cipher: message = 11839599170430180289, Div = 52.400
+19: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+20: It is nums cipher: message = 99242260282392671415, Div = 52.200
+21: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+22: It is nums cipher: message = 22469496283032369789, Div = 53.100
+23: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+24: It is nums cipher: message = 01863802888614706410, Div = 52.050
+25: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+26: It is nums cipher: message = 92461062083782064386, Div = 52.250
+27: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+28: It is nums cipher: message = 11839599170430180289, Div = 52.400
+29: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+30: It is nums cipher: message = 99242260282392671415, Div = 52.200
+31: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+32: It is nums cipher: message = 22469496283032369789, Div = 53.100
+33: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+34: It is nums cipher: message = 01863802888614706410, Div = 52.050
+35: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
+36: It is nums cipher: message = 92461062083782064386, Div = 52.250
+37: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+38: It is nums cipher: message = 11839599170430180289, Div = 52.400
+39: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050

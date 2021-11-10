@@ -1,0 +1,12 @@
+Sorted container:
+Container contains 10 elements.
+0: It is nums cipher: message = 01863802888614706410, Div = 52.050
+1: It is nums cipher: message = 99242260282392671415, Div = 52.200
+2: It is nums cipher: message = 92461062083782064386, Div = 52.250
+3: It is nums cipher: message = 11839599170430180289, Div = 52.400
+4: It is nums cipher: message = 22469496283032369789, Div = 53.100
+5: It is a shift cipher: message = Otpe07id2MsQ11T0GCXF, Div = 78.250
+6: It is a shift cipher: message = JIW6Fpb03hMDFRt2DOfk, Div = 79.500
+7: It is a shift cipher: message = o38HLAVGVZxyr8T91jUi, Div = 83.050
+8: It is a symbol cipher: message = mGZ6PrJoPN8pPIPtuWX4, Div = 86.100
+9: It is a symbol cipher: message = koZ5IZkIrvHnCxaKWFjz, Div = 93.100
