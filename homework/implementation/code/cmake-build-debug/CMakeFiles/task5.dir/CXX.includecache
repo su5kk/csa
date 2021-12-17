@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Tim/shit/Desktop/studyShit/ВШЭ/2 курс/АВС/csa/homework/implementation/code/main.cpp
+model/cipher.h
+/mnt/c/Users/Tim/shit/Desktop/studyShit/ВШЭ/2 курс/АВС/csa/homework/implementation/code/model/cipher.h
+iostream
+-
+string
+-
+thread
+-
+future
+-
+
+/mnt/c/Users/Tim/shit/Desktop/studyShit/ВШЭ/2 курс/АВС/csa/homework/implementation/code/model/cipher.h
+future
+-
+map
+-
+string
+-
+iostream
+-
+
